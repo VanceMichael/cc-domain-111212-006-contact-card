@@ -11,6 +11,12 @@ def scenario():
     routes = {}
     routes['GET /cards'] = [response(fixtures['sample.vcf'],status=200)]
     routes['GET /folded'] = [response(fixtures['folded.vcf'],status=200)]
+    routes['GET /bilingual'] = [response(fixtures['bilingual.vcf'],status=200)]
+    routes['GET /group-forward'] = [response(fixtures['forward-group.vcf'],status=200)]
+    routes['GET /person-forward'] = [response(fixtures['forward-person.vcf'],status=200)]
+    routes['GET /vcard3'] = [response(fixtures['vcard3.vcf'],status=200)]
+    routes['GET /unsupported-encoding'] = [
+        response(fixtures['unsupported-encoding.vcf'],status=200)]
     return routes
 
 def main():
